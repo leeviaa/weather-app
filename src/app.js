@@ -8,6 +8,8 @@ const forecast = require('./utils/forecast');
 
 //set up an express server
 const app = express()
+const port = process.env.PORT || 3000;
+console.log(port);
 //define path for express config
 const pubDir = path.join(__dirname, '../public');
 const viewsPath = path.join(__dirname, '../templates/views');
@@ -100,6 +102,6 @@ app.get('*', (req, res) => {
 
 
 //start server
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is up and running on port 3000')
 })
