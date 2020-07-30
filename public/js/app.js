@@ -13,7 +13,7 @@
           } else {
             const weatherContainer = document.querySelector('.weather-info');
             let weatherHtml = `<h3> The Weather info for ${data.location}</h3>
-              <p>The current weather conditions in ${data.location} is ${data.weather}, the temperature is ${data.temperature} and the wind is blowing ${data.wind} </p>
+              <p>The current weather conditions in ${data.location} is ${data.weather}, the temperature is ${data.temperature} with wind blowing ${data.wind}, and there is a ${data.chanceOfPrecip}% chance of precipitation. </p>
             
               `
               weatherContainer.innerHTML = weatherHtml;

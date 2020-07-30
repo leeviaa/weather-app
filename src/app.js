@@ -60,12 +60,13 @@ app.get('/weather', (req, res) => {
                 windSpeed = forecastData.wind_speed,
                 windDir = forecastData.wind_dir,
                 temperature = forecastData.temperature;
-
+          console.log(forecastData.precip)
                 res.send({
                   location: location, 
                   weather: weatherConditions,
                   temperature: temperature,
-                  wind: `${windSpeed}mph, ${windDir}`
+                  wind: `${windSpeed}mph ${windDir}`,
+                  chanceOfPrecip: forecastData.precip
                 })
         })
   })
