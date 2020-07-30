@@ -4,7 +4,7 @@
     weatherForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const location = searchBar.value;
-     
+    
       fetch(`http://localhost:3000/weather?location=${location}`)
       .then(res => {
         res.json().then( data => {
@@ -17,7 +17,6 @@
             
               `
               weatherContainer.innerHTML = weatherHtml;
-           console.log(data);
             searchBar.value= '';
           }
         })
